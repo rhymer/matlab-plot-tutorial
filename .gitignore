@@ -14,6 +14,7 @@
 *.ps
 *.eps
 *.pdf
+*.fig
 
 ## Bibliography auxiliary files (bibtex/biblatex/biber):
 *.bbl
@@ -137,3 +138,6 @@ sympy-plots-for-*.tex/
 
 # Flymake files
 *_flymake.*
+
+# Matlab's auto-save
+*.asv
