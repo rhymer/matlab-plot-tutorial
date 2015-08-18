@@ -1,18 +1,15 @@
-\documentclass[compress]{beamer}  % Use [compress] for presentation. [handout]
+\documentclass{beamer}  % Use [compress] for presentation. [handout]
 %=========================================================================================
 % Beamer settings
-%=========================================================================================\
-\mode<presentation>
-\usetheme{Boadilla} % Beamer Theme
-\useoutertheme[subsection=false]{smoothbars}
-\useinnertheme{rectangles}
-\usecolortheme{orchid} % Beamer Color Theme
-\beamertemplatenavigationsymbolsempty  % No navigation bar.
+%=========================================================================================
+\input{beamerthemeAmsterdam.sty}
+\beamertemplatenavigationsymbolsempty % No navigation bar.
 \setbeamertemplate{footline}[page number]  % Show page number.
 %=========================================================================================
 % Math Packages
-%=========================================================================================\
-\usepackage{ifpdf}
+%=========================================================================================
+\usepackage{lmodern}
+\usepackage{textcomp}
 \usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{amsfonts}
@@ -29,12 +26,10 @@
 \usepackage{graphicx}
 \usepackage{caption}
 \usepackage{subcaption}
-\usepackage{epstopdf}
-\epstopdfsetup{outdir=./eps2pdf/}   
-\graphicspath{{eps/}{png/}}  
+\graphicspath{{fig/}}
 %\usepackage{tikz,pgfplots}
 %\usetikzlibrary{arrows}
-%\pgfplotsset{compat=newest} 
+%\pgfplotsset{compat=newest}
 %\pgfplotsset{plot coordinates/math parser=false}
 %=========================================================================================
 % Syntax Coloring for Matlab code
@@ -58,7 +53,7 @@
 %=========================================================================================
 \title{Matlab Graphics}
 \author{Cheng-An Yang}
-%\institute{}
+\institute{UCLA HSSEAS Workshop}
 \date{December 17, 2012}  % Insert customized date.
 %=========================================================================================
 % Slides Begin Here.
