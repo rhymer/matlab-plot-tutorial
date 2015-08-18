@@ -1,0 +1,49 @@
+% Matlab listing macros.
+%   First we define the Matlab listing style. There are two classoffset
+%   beside the basic keywords. The first offset is for command style 
+%   code with purple color. The second offset is the emphisized keywords.
+%   Feel free to edit or remove them.
+%
+%   We provide two commands to use the Matlab code listing style.
+%
+%   The matlabcode environment:
+%       \begin{matlabcode}[additional_styles]
+%           put your Matlab code here
+%       \end{matlabcode}
+%
+%   The input method:
+%       \inputMatlabCode{filename}[additional_style]
+
+\definecolor{dkgreen}{rgb}{0,0.6,0}  % Comment.
+\definecolor{purple}{rgb}{0.6,0,0.6} % String.
+\lstloadlanguages{Matlab}
+\lstdefinestyle{Matlab}  % Define the Matlab listing style.
+{
+   language=Matlab,
+   basicstyle=\ttfamily,
+   numbers=none, % {right, left, none}
+   numberstyle=\tiny\color{black},
+   stepnumber=1,
+   numbersep=10pt,
+   backgroundcolor=\color{white},
+   tabsize=4,
+   showspaces=false,
+   showstringspaces=false,
+   classoffset=0, %=================================================== 
+   frame=single,  % Single frame around code
+   keywords={break,case,catch,continue,else,elseif,end,for,function,
+             global,if,otherwise,persistent,return,switch,try,while},
+   keywordstyle=\color{blue},
+   commentstyle=\usefont{T1}{pcr}{m}{sl}\color{dkgreen},
+   stringstyle=\color{purple},
+   classoffset=1, %===================================================
+   morekeywords={all,on,off},keywordstyle=\color{purple},
+   classoffset=2, %===================================================
+   morekeywords={},
+   keywordstyle=\color{black}\bfseries,
+   classoffset=0  %===================================================
+}
+
+\lstnewenvironment{matlabcode}[1][]{\lstset{style=Matlab,#1}}{}
+\newcommand{\inputMatlabCode}[2][]
+           {\lstinputlisting[style=Matlab,title=\lstname,#1]{#2}}

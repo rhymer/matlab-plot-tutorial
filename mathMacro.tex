@@ -1,0 +1,111 @@
+%========== Probability ==========%
+	% iid: independent identically distributed
+\newcommand{\iid}{\textit{i.i.d.}}
+	% Expectation
+%\newcommand{\E}[1]{\ensuremath{\operatorname{E}\left[\: #1 \:\right]}}
+\newcommand{\E}[2][0]{%
+  \ifcase#1 
+         \operatorname{\mathbf E}       ( #2       ) 
+     \or \operatorname{\mathbf E} \bigl ( #2  \bigr)
+     \or \operatorname{\mathbf E} \Bigl ( #2  \Bigr) 
+     \or \operatorname{\mathbf E} \biggl( #2 \biggr)
+     \or \operatorname{\mathbf E} \Biggl( #2 \Biggr) 
+  \else 
+         \operatorname{\mathbf E} \mathopen{}\left( #2 \mathclose{}\right)
+  \fi}
+  
+	% Conditional Expectation
+%\newcommand{\cE}[2]{\ensuremath{\operatorname{E}\left[\: #1 \:\middle\vert\: #2 \:\right]}}
+%% Example:
+% $$ \cE{X}{Y} \quad  
+%   \cE[1]{X}{Y^2} \quad 
+%   \cE[2]{X}{\dfrac{Y}{Z}} \quad 
+%   \cE[3]{X}{\dfrac{Y}{Z}}\quad 
+%   \cE[4]{X}{\dfrac{Y}{Z}}\quad 
+%   \cE[5]{X}{\frac{Y^{\int}}{Z}}$$
+\newcommand{\cE}[3][0]{%
+  \ifcase#1 
+         \operatorname{\mathbf E}       ( #2       \mid  #3       ) 
+     \or \operatorname{\mathbf E} \bigl ( #2 \bigm \vert #3 \bigr )
+     \or \operatorname{\mathbf E} \Bigl ( #2 \Bigm \vert #3 \Bigr ) 
+     \or \operatorname{\mathbf E} \biggl( #2 \biggm\vert #3 \biggr)
+     \or \operatorname{\mathbf E} \Biggl( #2 \Biggm\vert #3 \Biggr) 
+  \else 
+     \operatorname{\mathbf E} \mathopen{}\left( #2  \;\middle\vert\; #3 \mathclose{}\right)
+  \fi}
+
+	% Variance
+\newcommand{\Var}[1]{\textrm{Var}\left[ #1 \right] }
+	% Normal Distribution
+\newcommand{\N}[2]{\ensuremath{ \mathcal{N}\left( #1, #2 \right) }}
+	% Circular-symmetric Complex Normal Distribution
+\newcommand{\CN}[2]{\ensuremath{ \mathcal{CN}\left( #1, #2 \right) }}
+	% Covariance
+\DeclareMathOperator{\cov}{cov}
+	% Probability
+%\newcommand{\Prob}[1]{\ensuremath{\Pr\!\left[\: #1 \:\right] }}
+\newcommand{\Prob}[2][0]{%
+  \ifcase#1 
+         \operatorname{\Pr}       ( #2       ) 
+     \or \operatorname{\Pr} \bigl ( #2  \bigr)
+     \or \operatorname{\Pr} \Bigl ( #2  \Bigr) 
+     \or \operatorname{\Pr} \biggl( #2 \biggr)
+     \or \operatorname{\Pr} \Biggl( #2 \Biggr) 
+  \else 
+         \operatorname{\Pr} \mathopen{}\left( #2 \mathclose{}\right)
+  \fi}
+  
+	% Conditional Probability
+%\newcommand{\cProb}[2]{\ensuremath{\Pr\!\left[\: #1 \:\middle\vert\: #2 \:\right] }}
+\newcommand{\cProb}[3][0]{%
+  \ifcase#1 
+         \operatorname{\Pr}       ( #2       \mid  #3       ) 
+     \or \operatorname{\Pr} \bigl ( #2 \bigm \vert #3 \bigr )
+     \or \operatorname{\Pr} \Bigl ( #2 \Bigm \vert #3 \Bigr ) 
+     \or \operatorname{\Pr} \biggl( #2 \biggm\vert #3 \biggr)
+     \or \operatorname{\Pr} \Biggl( #2 \Biggm\vert #3 \Biggr) 
+  \else 
+     \operatorname{\Pr} \mathopen{}\left( #2  \;\middle\vert\; #3 \mathclose{}\right)
+  \fi}
+  
+	% Event
+\newcommand{\event}[1]{\ensuremath{\left\{ #1 \right\} }}
+	% Distributed As
+\newcommand{\distas}{\ensuremath{\overset{\textit{d}}{=}}}
+
+\newcommand{\pperp}{\perp\!\!\!\perp}
+%========== Matrix ==========%
+	% Trace Operator
+\DeclareMathOperator{\tr}{tr}
+	% Norm
+%\newcommand{\norm}[1]{\left|\left| #1 \right|\right|}
+\newcommand{\norm}[2][0]{%
+  \ifcase#1 
+         \lVert #2 \rVert 
+     \or \bigl\lVert #2 \bigl\rVert
+     \or \Bigl\lVert #2 \Bigl\rVert
+     \or \biggl\lVert #2 \biggl\rVert
+     \or \Biggl\lVert #2 \Biggl\rVert 
+  \else 
+         \mathopen{}\left\lVert #2 \mathclose{}\right\rVert
+  \fi}
+
+\DeclareMathOperator{\sgn}{sgn}
+\DeclareMathOperator{\diag}{diag}
+\DeclareMathOperator{\epi}{epi}
+\DeclareMathOperator{\Image}{Im}
+\DeclareMathOperator{\conv}{conv}  % Convex hull
+\newcommand{\one}{\ensuremath{\mathbbm{1}}}  % Indicator function
+\DeclareMathOperator{\spn}{span}  % Linear span
+
+%========== Arithmatic ==========%
+\newcommand{\e}{\textrm{e}}
+
+
+%========== Matrix ==============%
+\DeclareMathOperator{\vect}{vec}
+
+
+
+
+
