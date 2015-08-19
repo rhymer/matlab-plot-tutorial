@@ -2,7 +2,7 @@
 %=========================================================================================
 % Beamer settings
 %=========================================================================================
-\input{beamerthemeAmsterdam.sty}
+\input{macro/beamerthemeAmsterdam.sty}
 \beamertemplatenavigationsymbolsempty % No navigation bar.
 \setbeamertemplate{footline}[frame number]{}
 %=========================================================================================
@@ -37,7 +37,7 @@
 \usepackage{courier}
 \usepackage{color}
 \usepackage{listings}
-\input{lstMatlab.tex} % Defines the Matlab code listing style and commands.
+\input{macro/lstMatlab.tex} % Defines the Matlab code listing style and commands.
 \newcommand{\tttbf}[1]{\texttt{\textbf{#1}}} % Matlab keywords: typewriter+bf.
 \definecolor{blockbody}{rgb}{0.914,0.914,0.953}
 \setbeamercolor{block body}{bg = blockbody}
@@ -45,9 +45,9 @@
 %=========================================================================================
 % User Defined Macro
 %=========================================================================================
-\input{mathMacro.tex}
-\input{vectorMacro.tex}
-\input{matrixMacro.tex}
+\input{macro/mathMacro.tex}
+\input{macro/vectorMacro.tex}
+\input{macro/matrixMacro.tex}
 %=========================================================================================
 % Information
 %=========================================================================================
